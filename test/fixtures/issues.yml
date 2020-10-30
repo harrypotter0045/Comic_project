@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyText
+  has_staff_review: false
+  cover_date: 2020-10-29
+  volume_id: 1
+
+two:
+  name: MyString
+  description: MyText
+  has_staff_review: false
+  cover_date: 2020-10-29
+  volume_id: 1
