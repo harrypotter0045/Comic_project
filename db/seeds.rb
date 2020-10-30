@@ -22,7 +22,8 @@ volumes.each do |v|
     description:     v["deck"],
     count_of_issues: v["count_of_issues"],
     start_year:      v["start_year"],
-    id:              v["id"]
+    id:              v["id"],
+    image:           v["image"]["medium_url"]
   )
 end
 

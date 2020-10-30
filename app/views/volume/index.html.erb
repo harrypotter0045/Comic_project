@@ -1,0 +1,21 @@
+
+<h1>Listing Volume</h1>
+<div class="vertical-menu">
+  <a href="about/index" class="active">Home</a>
+  <a href="/characters">Characters</a>
+  <a href="/issues">Issues</a>
+  <a href="/volumes">Volumes</a>
+</div>
+<table>
+  <tr>
+    <th>Volume Name</th>
+    <th>Issue Counts</th>
+  </tr>
+
+  <% @volumes.each do |v| %>
+    <tr>
+      <td><%= link_to v.name, v %></td>
+      <td><%= v.count_of_issues%></td>
+    </tr>
+  <% end %>
+</table>
