@@ -6,6 +6,8 @@
   <a href="/volumes">Volumes</a>
 </div>
 
+<p><%= link_to "Advanced Search", new_search_path %></p>
+
 <%= form_tag characters_path, :method => 'get' do %>
   <p>
     <%= text_field_tag :search, params[:search] %>
