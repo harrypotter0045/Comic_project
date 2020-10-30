@@ -1,0 +1,22 @@
+
+<h1>Listing Characters</h1>
+<div class="vertical-menu">
+  <a href="about/index" class="active">Home</a>
+  <a href="/characters">Characters</a>
+  <a href="/issues">Issues</a>
+  <a href="/volumes">Volumes</a>
+</div>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>First Appearance</th>
+    <th></th>
+  </tr>
+
+  <% @characters.each do |c| %>
+    <tr>
+      <td><%= link_to c.name, c %></td>
+      <td><%= c.issue.name %></td>
+    </tr>
+  <% end %>
+</table>

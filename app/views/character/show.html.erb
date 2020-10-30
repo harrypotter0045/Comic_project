@@ -1,0 +1,9 @@
+<h1><%= @character.name  %></h1>
+<img src = <%= @character.image%>>
+<p>Brief Summary: <%= @character.description %></p>
+<p>First Appearance: <%= @character.issue.name %></p>
+<% if @character.gender == 1%>
+<p>Gender: Male</p>
+<% else%>
+<p>Gender: Female</p>
+<%end%>
