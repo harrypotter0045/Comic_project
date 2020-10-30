@@ -1,6 +1,6 @@
 class CharacterController < ApplicationController
   def index
-    @characters = Character.all.page(params[:page]).per(10)
+    @characters = Character.search(params[:search]).page(params[:page]).per(10)
   end
 
   def show
@@ -10,4 +10,6 @@ class CharacterController < ApplicationController
   def show_by_issue
     @characters = Character.where(issue_id: params[:issue_id])
   end
+
+  def search; end
 end

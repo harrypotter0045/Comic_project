@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 
   get "/characters/:issue_id", to: "character#show_by_issue", as: "character_issue"
 
+  get "/search" => "character#search", :as => "search_page"
+
   get "/issues", to: "issues#index", as: "issues"
 
   get "/issue/:id", to: "issues#show", as: "issue"
