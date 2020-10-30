@@ -1,7 +1,13 @@
+<div class="vertical-menu">
+  <a href="about/index" class="active">Home</a>
+  <a href="/characters">Characters</a>
+  <a href="/issues">Issues</a>
+  <a href="/volumes">Volumes</a>
+</div>
 <h1><%= @character.name  %></h1>
 <img src = <%= @character.image%>>
 <p>Brief Summary: <%= @character.description %></p>
-<p>First Appearance: <%= @character.issue.name %></p>
+<p>First Appearance: <a href = "/issue/<%= @character.issue_id%>"><%=@character.issue.name%></a></p>
 <% if @character.gender == 1%>
 <p>Gender: Male</p>
 <% else%>

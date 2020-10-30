@@ -1,3 +1,9 @@
+<div class="vertical-menu">
+  <a href="about/index" class="active">Home</a>
+  <a href="/characters">Characters</a>
+  <a href="/issues">Issues</a>
+  <a href="/volumes">Volumes</a>
+</div>
 <h1><%= @issue.name  %></h1>
 <img src = <%= @issue.image%>>
 <% if @issue.has_staff_review%>
@@ -7,3 +13,4 @@
 <%end%>
 <p>Brief Summary: <%= @issue.description %></p>
 <p>Cover Date: <%= @issue.cover_date%></p>
+<p>Links to all Characters in the Issue <a href= "/characters/<%=@issue.id%>"><%= @issue.name%></a></p>

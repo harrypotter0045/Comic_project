@@ -1,5 +1,5 @@
 
-<h1>Listing Issue</h1>
+<h1>Listing All Characters in Issue</h1>
 <div class="vertical-menu">
   <a href="about/index" class="active">Home</a>
   <a href="/characters">Characters</a>
@@ -8,13 +8,15 @@
 </div>
 <table>
   <tr>
-    <th>Issue Name</th>
+    <th>Name</th>
+    <th>First Appearance</th>
     <th></th>
   </tr>
 
-  <% @issues.each do |i| %>
+  <% @characters.each do |c| %>
     <tr>
-      <td><%= link_to i.name, i %></td>
+      <td><%= link_to c.name, c %></td>
+      <td><%= c.issue.name %></td>
     </tr>
   <% end %>
 </table>
