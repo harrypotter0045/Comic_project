@@ -11,6 +11,7 @@
 <%= form_tag characters_path, :method => 'get' do %>
   <p>
     <%= text_field_tag :search, params[:search] %>
+    <%= collection_select(:character, :id, Issue.all, :id, :name, include_blank: true) %>
     <%= submit_tag "Search", :name => nil %>
   </p>
 <% end %>

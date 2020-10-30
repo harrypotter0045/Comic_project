@@ -4,15 +4,11 @@ class SearchesController < ApplicationController
   end
 
   def create
-    @search = Search.create(params[:search].permit(:keyword))
+    @search = Search.create(params[:search].permit(:keyword, :id))
     redirect_to @search
   end
 
   def show
     @search = Search.find(params[:id])
-  end
-
-  def search_params
-    params.require(:search).permit(:search)
   end
 end
