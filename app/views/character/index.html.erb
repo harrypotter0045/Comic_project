@@ -6,12 +6,11 @@
   <a href="/volumes">Volumes</a>
 </div>
 
-<p><%= link_to "Advanced Search", new_search_path %></p>
 
 <%= form_tag characters_path, :method => 'get' do %>
   <p>
     <%= text_field_tag :search, params[:search] %>
-    <%= collection_select(:character, :id, Issue.all, :id, :name, include_blank: true) %>
+    <%= collection_select(:character, :id, Issue.all, :id, :name, include_blank: false) %>
     <%= submit_tag "Search", :name => nil %>
   </p>
 <% end %>
@@ -20,7 +19,6 @@
   <tr>
     <th>Name</th>
     <th>First Appearance</th>
-    <th></th>
   </tr>
 
   <% @characters.each do |c| %>
