@@ -6,6 +6,12 @@
   <a href="/issues">Issues</a>
   <a href="/volumes">Volumes</a>
 </div>
+<%= form_tag volumes_path, :method => 'get' do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil %>
+  </p>
+<% end %>
 <table>
   <tr>
     <th>Volume Name</th>

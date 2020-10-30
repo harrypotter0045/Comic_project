@@ -1,6 +1,6 @@
 class VolumeController < ApplicationController
   def index
-    @volumes = Volume.all.page(params[:page]).per(10)
+    @volumes = Volume.search(params[:search]).page(params[:page]).per(10)
   end
 
   def show
