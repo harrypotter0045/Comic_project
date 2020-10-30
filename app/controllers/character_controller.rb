@@ -11,5 +11,4 @@ class CharacterController < ApplicationController
     @characters = Character.where(issue_id: params[:issue_id])
   end
 
-  def search; end
 end

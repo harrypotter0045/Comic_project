@@ -1,6 +1,6 @@
 class IssuesController < ApplicationController
   def index
-    @issues = Issue.all.page(params[:page]).per(10)
+    @issues = Issue.search(params[:search]).page(params[:page]).per(10)
   end
 
   def show
