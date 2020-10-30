@@ -1,0 +1,9 @@
+<h1><%= @issue.name  %></h1>
+<img src = <%= @issue.image%>>
+<% if @issue.has_staff_review%>
+<p>This Issue has been reviewed by Staff at Comic Vine</p>
+<% else%>
+<p>This Issue hasn't been reviewed by Staff at Comic Vine (why?)</p>
+<%end%>
+<p>Brief Summary: <%= @issue.description %></p>
+<p>Cover Date: <%= @issue.cover_date%></p>

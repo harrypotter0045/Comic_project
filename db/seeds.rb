@@ -40,7 +40,8 @@ characters.each do |c|
     has_staff_review: iss_info["has_staff_review"],
     cover_date:       iss_info["cover_date"],
     volume_id:        iss_info["volume"]["id"],
-    id:               iss_info["id"]
+    id:               iss_info["id"],
+    image:            iss_info["image"]["medium_url"]
   )
 
   character = Character.create(

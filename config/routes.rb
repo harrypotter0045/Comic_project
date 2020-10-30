@@ -5,4 +5,8 @@ Rails.application.routes.draw do
   get "/characters", to: "character#index", as: "characters"
 
   get "/character/:id", to: "character#show", as: "character"
+
+  get "/issues", to: "issues#index", as: "issues"
+
+  get "/issue/:id", to: "issues#show", as: "issue"
 end
